@@ -7,6 +7,13 @@ group :development do
   gem "rspec"
   gem "fakeweb"
 
+
   gem "pry"
   gem "pry-doc"
+
+  # benchmark and profiling/performance testing
+  gem "public_suffix"
+  gem "ruby-prof"
+  gem "perftools.rb"
+
 end
