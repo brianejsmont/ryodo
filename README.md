@@ -2,14 +2,16 @@
 
 **ryōdo【領土】 りょうど — A domain name parser using public suffix list**
 
-----
+Do you ever wanted to know if `suspicious.domain.name.blerp` is really a valid domain?
 
-This is a pure Ruby implementation of the [regdomr](https://github.com/asaaki/regdomr) gem, but with slightly different API.
+Do you ever wanted to know what is the domain portion of `others.guy.awesome.domain.co.jp`?
 
-Without the Cext backend it should be also easily usable with Ruby implemenations like JRuby.
+Then you should try `ryodo` and get the answers!
 
-**Works only with Ruby 1.9.x!** (I dropped all support for 1.8.x)
+Notice: This gem **does not** check DNS records to verify if a name was taken and registered, this is not its purpose.
+I am a big fan of the UNIX philosophy: *»Write programs that do one thing and do it well.«*
 
+My blog post about `ryodo`: [ryodo - domain parser (2012-06-02)](http://codecraft.io/2012/06/02/ryodo-domain-parser/)
 
 
 ## Usage
@@ -90,7 +92,7 @@ gem "ryodo", :require => ["ryodo", "ryodo/ext/string"]
 ### UTF-8 junkie?
 
 ```ruby
-# encoding: utf-8
+# coding: utf-8
 require "ryodo/convenience/utf8"
 
 ryōdo("my.awesome.domain.co.jp")
@@ -223,6 +225,6 @@ Lot of specs missing, this first version of second approach was developed in pla
 
 ## License
 
-MIT/X11 — see `LICENSE.txt`
+MIT/X11 — see [`LICENSE`](./LICENSE)
 
-(c) 2012 Christoph Grabo
+(c) 2012—2013 Christoph Grabo
