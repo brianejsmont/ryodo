@@ -1,11 +1,9 @@
-source :rubygems
+source "https://rubygems.org"
 
 group :development do
   gem "rake"
   gem "bundler"
   gem "jeweler"
-  gem "rspec"
-  gem "fakeweb"
 
 
   gem "pry"
@@ -16,4 +14,9 @@ group :development do
   gem "ruby-prof"
   gem "perftools.rb", :platforms => [:mri_19]
 
+end
+
+group :development, :test do
+  gem "rspec"
+  gem "fakeweb"
 end
