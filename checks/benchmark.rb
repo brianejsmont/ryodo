@@ -72,6 +72,30 @@ DOMAINS = %w[
   k12.ak.us
   test.k12.ak.us
   www.test.k12.ak.us
+  VacationRentals.com
+  Insure.com
+  Sex.com
+  Fund.com
+  Porn.com
+  Fb.com
+  Business.com
+  Diamond.com
+  Beer.com
+  Israel.com
+  Casino.com
+  Slots.com
+  Toys.com
+  Asseenontv.com
+  iCloud.com
+  GiftCard.com
+  Yp.com
+  AltaVista.com
+  Candy.com
+  Loans.com
+  symbolics.com
+  nordu.net
+  mitre.org
+  berkeley.edu
   this.is.a.long.domain.com
   this.is.a.longer.domain.com
   this.is.an.even.longer.domain.com
@@ -120,8 +144,6 @@ result_ryodo, result_public_suffix = results
 ps_to_r = "%3.2f" % (result_public_suffix.real / result_ryodo.real)
 
 footer = <<-EOL
-
-Ryodo vs. PublicSuffix
 
 Ryodo is #{ps_to_r} times faster than PublicSuffix.
 
