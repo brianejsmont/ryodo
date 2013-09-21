@@ -86,7 +86,17 @@ DOMAINS = %w[
 
 LOOPS = 1_000
 
-Benchmark.bmbm(15) do |b|
+header = <<-EOL
+Benchmark of domain parsing
+===========================
+
+Number of loops: #{LOOPS}
+Number of items per loop: #{DOMAINS.count}
+
+EOL
+puts header
+
+results = Benchmark.bmbm(15) do |b|
 
   b.report "ryodo" do
     LOOPS.times do
@@ -105,3 +115,15 @@ Benchmark.bmbm(15) do |b|
   end
 
 end
+
+result_ryodo, result_public_suffix = results
+ps_to_r = "%3.2f" % (result_public_suffix.real / result_ryodo.real)
+
+footer = <<-EOL
+
+Ryodo vs. PublicSuffix
+
+Ryodo is #{ps_to_r} times faster than PublicSuffix.
+
+EOL
+puts footer
