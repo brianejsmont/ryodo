@@ -5,7 +5,6 @@ group :development do
   gem "bundler"
   gem "jeweler"
 
-
   gem "pry"
   gem "pry-doc"
 
@@ -14,6 +13,11 @@ group :development do
   gem "ruby-prof"
   gem "perftools.rb", :platforms => [:mri_19, :mri_20]
 
+end
+
+group :development, :test do
+  gem "rspec"
+  gem "fakeweb"
 end
 
 group :development, :test do
