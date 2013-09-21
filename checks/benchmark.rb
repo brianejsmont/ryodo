@@ -86,21 +86,16 @@ DOMAINS = %w[
 
 LOOPS = 1_000
 
-puts "\n\n@@@ RYODO\n"
+Benchmark.bmbm(15) do |b|
 
-Benchmark.bmbm(25) do |b|
-  b.report "ryodo (new select_rule)" do
+  b.report "ryodo" do
     LOOPS.times do
       DOMAINS.each do |domain|
         Ryodo.parse(domain).domain # returns nil if not valid
       end
     end
   end
-end
 
-puts "\n\n@@@ PUBLIC_SUFFIX\n"
-
-Benchmark.bmbm(25) do |b|
   b.report "public_suffix" do
     LOOPS.times do
       DOMAINS.each do |domain|
@@ -108,4 +103,5 @@ Benchmark.bmbm(25) do |b|
       end
     end
   end
+
 end

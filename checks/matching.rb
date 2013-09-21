@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
-$: << "lib"
+$: << "../lib"
 require "ryodo"
 
 def checkPublicSuffix query, expectation

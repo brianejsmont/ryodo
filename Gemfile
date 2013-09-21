@@ -12,7 +12,7 @@ group :development do
   # benchmark and profiling/performance testing
   gem "public_suffix"
   gem "ruby-prof"
-  gem "perftools.rb", :platforms => [:mri_19]
+  gem "perftools.rb", :platforms => [:mri_19, :mri_20]
 
 end
 
